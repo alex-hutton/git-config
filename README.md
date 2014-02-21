@@ -10,4 +10,5 @@ cd ~/
 git clone [repo] .git-config
 cd .git-config
 make install
+source ~/.bashrc
 ```
