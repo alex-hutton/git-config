@@ -2,6 +2,7 @@ BASHRC_LINE = source $(shell pwd)/git-completion.bash
 
 install:
 	grep -v "$(BASHRC_LINE)" ~/.bashrc > temp && mv temp ~/.bashrc
+	touch ~/.bashrc
 	wget -nc \
 		https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 	echo $(BASHRC_LINE) >> ~/.bashrc
