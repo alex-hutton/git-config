@@ -12,6 +12,7 @@ install:
 	git config --global color.ui auto
 	git config --global core.editor vim
 	git config --global core.excludesfile $(shell pwd)/gitignore_global
+	echo "source ~/.bashrc"
 
 install_ix: install
 	git config --global user.email "ahutton@infoxchange.net.au"
