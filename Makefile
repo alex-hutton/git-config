@@ -1,7 +1,9 @@
 BASHRC_LINE = source $(shell pwd)/git-completion.bash
+DEBIAN_DEPENDENCIES = wget
 
 install:
 	touch ~/.bashrc
+	DEBIAN_FRONTEND=noninteractive sudo -E apt-get -y install $(DEBIAN_DEPENDENCIES)
 	wget -nc \
 		https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 	-grep -v "$(BASHRC_LINE)" ~/.bashrc > temp
