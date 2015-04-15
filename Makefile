@@ -21,3 +21,6 @@ install_self:
 
 install_ix:
 	git config --global user.email "ahutton@infoxchange.net.au"
+
+install_qit:
+	git config --global user.emai "alex.hutton@quantumit.com.au"
