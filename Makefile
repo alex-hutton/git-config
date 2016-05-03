@@ -17,10 +17,4 @@ install: install_${PERSONA}
 	echo "\nRemember:\n source ~/.bashrc\n"
 
 install_self:
-	git config --global user.email "alex@jovialsol.com"
-
-install_ix:
-	git config --global user.email "ahutton@infoxchange.net.au"
-
-install_qit:
-	git config --global user.emai "alex.hutton@quantumit.com.au"
+	git config --global user.email "mail@alexhutton.xyz"
