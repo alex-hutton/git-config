@@ -1,9 +1,10 @@
 BASHRC = ~/.bashrc
 BASHRC_LINE = source $(shell pwd)/git-completion.bash
 DEPENDENCIES = wget
-PERSONA ?= self
+EMAIL ?= mail@alexhutton.xyz
 
-install: install_${PERSONA}
+install:
+	git config --global user.email "${EMAIL}"
 	touch ~/.bashrc
 	../check_dependencies.sh $(DEPENDENCIES)
 	wget -nc \
@@ -15,9 +16,3 @@ install: install_${PERSONA}
 	git config --global core.editor vim
 	git config --global core.excludesfile $(shell pwd)/gitignore_global
 	@printf "\nRemember:\n source ~/.bashrc\n"
-
-install_self:
-	git config --global user.email "mail@alexhutton.xyz"
-
-install_telstra:
-	git config --global user.email "alex.hutton@team.telstra.com"
