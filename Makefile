@@ -14,5 +14,9 @@ install:
 	git config --global user.name "Alex Hutton"
 	git config --global color.ui auto
 	git config --global core.editor vim
+	git config --global alias.co checkout
+	git config --global alias.br branch
+	git config --global alias.ci commit
+	git config --global alias.st status
 	git config --global core.excludesfile $(shell pwd)/gitignore_global
 	@printf "\nRemember:\n source ~/.bashrc\n"
