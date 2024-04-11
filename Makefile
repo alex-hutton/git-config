@@ -19,4 +19,6 @@ install:
 	git config --global alias.ci commit
 	git config --global alias.st status
 	git config --global core.excludesfile $(shell pwd)/gitignore_global
+	git config --global pretty.dateline \
+		"format:%C(yellow) %h %Cgreen%cs %Creset %s"
 	@printf "\nRemember:\n source ~/.bashrc\n"
